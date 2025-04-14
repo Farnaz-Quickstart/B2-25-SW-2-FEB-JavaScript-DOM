@@ -1,5 +1,7 @@
 
-// document.getElementById ("p1").textContent = "hello how are you?????????"
+console.log (document.querySelector ("p"))
+console.log (document.querySelectorAll("p"))
+
 
 function handleChangText () {
 
@@ -19,9 +21,4 @@ function handleChangColor() {
   }
 }
 
-// let colors = ["black", "blue", "red", "white"]
-
-// for (let index=0; index< colors.length; index++) {
-//   console.log (colors[index])
-// }
 
