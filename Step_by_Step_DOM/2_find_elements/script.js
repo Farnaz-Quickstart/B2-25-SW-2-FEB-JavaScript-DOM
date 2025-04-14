@@ -1,33 +1,27 @@
 
-function handleClickByID() {
-  // Selecting Element: getElementById
-  let elementInput = document.getElementById("profile")
-  elementInput.style.backgroundColor = "red"
+// document.getElementById ("p1").textContent = "hello how are you?????????"
+
+function handleChangText () {
+
+  let arr_Paragraphs = document.getElementsByClassName("paragraph2")
+
+  for (let index=0 ; index< arr_Paragraphs.length; index++){
+    arr_Paragraphs[index].textContent = "Hello"
+  }
 }
 
-function changeElements () {
+function handleChangColor() {
+  let arr_Paragraphs = document.getElementsByClassName("paragraph2")
 
-
-  // Selecting Element: getElementsByClassName
-  let greenElements = document.getElementsByClassName ("green")
-  console.log (greenElements)
-  
-  for (let i = 0 ; i < greenElements.length ; i++) {
-    let elementTemp = greenElements [i]
-    elementTemp.innerHTML = "This is a test"
-    elementTemp.style.backgroundColor = "red"
+  for (let index=0 ; index< arr_Paragraphs.length; index++){
+    console.log (arr_Paragraphs[index])
+    arr_Paragraphs[index].style.backgroundColor = "blue"
   }
-
-  // Selecting Element: getElementsByTagName
-  let paragraphElements = document.getElementsByTagName ("p")
-  console.log (paragraphElements)
-
-  for (let i = 0 ; i < paragraphElements.length ; i++) {
-    let elementTemp = paragraphElements [i]
-    elementTemp.style.backgroundColor = "blue"
-  }
-
-
-
 }
+
+// let colors = ["black", "blue", "red", "white"]
+
+// for (let index=0; index< colors.length; index++) {
+//   console.log (colors[index])
+// }
 

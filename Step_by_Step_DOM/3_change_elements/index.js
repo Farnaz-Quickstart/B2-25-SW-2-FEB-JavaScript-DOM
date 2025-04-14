@@ -1,45 +1,31 @@
 // Changing HTML Elements
 // Reference: https://www.w3schools.com/js/js_htmldom_document.asp
 
-function handleClick_changeList_bytextContent() {
-  let listItems = document.getElementsByClassName("list-group-item")
-  for (let i = 0 ; i < listItems.length; i++ ) {
-    listItems[i].textContent = `This is Quickstart ${i}`
+function handleClick_changeList() {
+
+  let arrItems = document.getElementsByClassName ("list-group-item")
+  
+  for (let index = 0; index< arrItems.length ; index++ ) {
+   arrItems[index].textContent= "Hi"
+   arrItems[index].innerHTML = "Hi <strong>How are you</strong>"
   }
 }
 
-function handleClick_changeList_byinnerHtml() {
-  let listItems = document.getElementsByClassName("list-group-item")
-  for (let i = 0 ; i < listItems.length; i++ ) {
-    listItems[i].innerHTML = `This is our <strong>Class</strong> <span style="color:red">test</span>`
-  }
-}
 
-function handleClick_change_radioList () {
-  let listItems = document.getElementsByName ("fav_language")
-  for (let i =0 ; i < listItems.length; i++) {
-    if (listItems[i].value == "backend") {
-      listItems[i].checked = "true"
-    }  
-  } 
-}
-
-function handleClick_changeImage() {
-  let img_element = document.getElementsByTagName ("img")
-  console.log (img_element)
-  img_element[2].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBHXsWT_vl7zFE8VgeWeGg1XKiH2N1Mv_pYA&s" 
-}
-
-function handleClick_changeStyle() {
-  let heading_element = document.getElementsByTagName ("h2")
-  for (let i =0 ; i < heading_element.length ; i++ ) {
-    if  (i < 2) {
-        heading_element[i].style.color="red"
+function handle_changeRdioButton() {
+  let arrItems = document.getElementsByName("fav_language")
+  for (index=0; index< arrItems.length; index++) {
+    if (arrItems[index].value=="CSS") {
+      arrItems[index].checked='true'
+      arrItems[index].style.backgroundColor = "green"
     }
   }
-
 }
 
+
+function handle_changeImage() {
+  document.getElementById("img_profile1").src="https://cdn.prod.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg"
+}
 
 
 
