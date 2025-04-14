@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(231, 231, 231);
+}
+
+p {
+  background-color: cadetblue;
+  margin: 10px;
+  padding:20px
+}
+
+.green {
+  background-color: green;
+}
+
