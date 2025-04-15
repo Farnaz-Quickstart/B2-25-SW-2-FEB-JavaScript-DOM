@@ -1,32 +1,30 @@
 // Changing HTML Elements
 // Reference: https://www.w3schools.com/js/js_htmldom_document.asp
 
-function handleClick_changeList() {
 
+function handleClick_changeList () {
   let arrItems = document.getElementsByClassName ("list-group-item")
-  
-  for (let index = 0; index< arrItems.length ; index++ ) {
-   arrItems[index].textContent= "Hi"
-   arrItems[index].innerHTML = "Hi <strong>How are you</strong>"
+  for (let index=0; index< arrItems.length; index++) {
+    arrItems[index].textContent = "Hi"
   }
 }
 
-
-function handle_changeRdioButton() {
-  let arrItems = document.getElementsByName("fav_language")
-  for (index=0; index< arrItems.length; index++) {
-    if (arrItems[index].value=="CSS") {
-      arrItems[index].checked='true'
-      arrItems[index].style.backgroundColor = "green"
-    }
+function handleClick_changeRB () {
+  console.log ("TESTED")
+  let arrItems = document.getElementsByName ("fav_language")
+  arrItems[1].checked = "true"
+  for (let index=0; index< arrItems.length; index++) {
+    console.log (index)
+    console.log (arrItems[index])
+    arrItems[index].checked = "true"
   }
 }
 
-
-function handle_changeImage() {
-  document.getElementById("img_profile1").src="https://cdn.prod.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg"
+function handleClick_changeImage() {
+  //document.getElementById("img_profile1").src = "https://news.clemson.edu/wp-content/uploads/2023/06/ocean.jpg"
+  let arrItems = document.getElementsByTagName ("img")
+  arrItems[0].src = "https://news.clemson.edu/wp-content/uploads/2023/06/ocean.jpg"
 }
-
 
 
 
