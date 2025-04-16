@@ -1,40 +1,43 @@
-// addEventListener: 
-// Reference: https://www.w3schools.com/jsref/dom_obj_event.asp
+/*
+addEventListener: 
+Reference: https://www.w3schools.com/jsref/dom_obj_event.asp
+Review
+Option 1: Named function
+Option 2: Anonymous function, function expression
+Option 3: Arrow function
+*/
 
-document.getElementById("btn_submit2").addEventListener ("click", doSomething())
 
-
-function handleClick_submit1 () {
-  console.log ("Hello 1")
+function func1 (myVar) {
+  console.log (myVar)
 }
 
-function handleClick_submit2 () {
-  console.log ("Hello 2")
+const func2 = function (myVar) {
+  console.log (myVar)
 }
 
-function handleClick_mouseOver() {
-  // alert ("mouseOver")
+const func3 = (myVar) => {
+  console.log (myVar)
 }
 
-function doSomething() {
-  console.log ("mytisha")
-  alert ("hello")
-  document.getElementById("btn_submit1").style.backgroundColor = "blue"
-  document.getElementById("btn_submit3").remove()
-  let headerTemp = document.createElement ("h2")
-  headerTemp.innerText = "haha"
-  // document.getElementById ("testDiv").appendChild (headerTemp)
+func1 ("Hi")
+func2 ("How are you")
+func3 ("My name is Omar")
+
+function handleSubmit ()  {
+  console.log ("Hi")
 }
- 
-let mitisha = document.getElementById("btn_submit2")
-console.log (mitisha)
-mitisha.style.backgroundColor= "red"
-// mitisha.addEventListener("click", handleClick_submit);
 
+document.getElementById ("btn_submit2").addEventListener ("click", handleSubmit)
 
-let btn_submit3 = document.getElementById("btn_submit3")
-btn_submit3.addEventListener("mouseover", handleClick_mouseOver);
+document.getElementById ("btn_submit2").addEventListener ("click", function() {
+  console.log ("How are you")
+})
 
+document.getElementById("btn_submit2").addEventListener ("click", ()=>{
+  console.log ("My name is Farnaz")
+})
 
-
-
+document.getElementById ("btn_submit3").addEventListener ("click", function(event) {
+  console.log (event)
+})

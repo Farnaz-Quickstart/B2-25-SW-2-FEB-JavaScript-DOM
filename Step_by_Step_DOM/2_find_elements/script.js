@@ -12,8 +12,7 @@ function handleChangeColor () {
 
 function handleChangeParagraphs1 () {
   let arrColors = document.getElementsByClassName("green")
-  for (let index=0; index < arrColors.length; index++) {
-  
+  for (let index=0; index < arrColors.length; index++) { 
     arrColors[index].style.backgroundColor = "yellow"
     arrColors[index].textContent = `Hello ${index}`
     arrColors[index].innerHTML = "Hello, How are you, My name is <strong>Usman</strong>"
@@ -30,6 +29,15 @@ function handleChangeParagraphs2 () {
   }  
   document.getElementsByTagName("p")[0].style.backgroundColor = "black"
   document.getElementsByTagName("p")[0].style.color = "white"
+}
+
+function handleQuerySelector() {
+  console.log (document.querySelector ("p"))
+  console.log (document.querySelector (".green"))
+}
+
+function handleQuerySelectorAll() {
+  console.log (document.querySelectorAll ("p"))
 }
 
 
