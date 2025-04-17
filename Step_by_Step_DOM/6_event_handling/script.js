@@ -7,37 +7,45 @@ Option 2: Anonymous function, function expression
 Option 3: Arrow function
 */
 
+// Event Listener with Named function
+document.getElementById("btn_submit1").addEventListener ("click", greetingClass)
 
-function func1 (myVar) {
-  console.log (myVar)
-}
+// Event Listener using Anonymous function
+document.getElementById("btn_submit2").addEventListener ("click", function() {
+  console.log ("Hi")
+  console.log ("This is class2")
+})
 
-const func2 = function (myVar) {
-  console.log (myVar)
-}
+// Event Listener using arrow function
+document.getElementById("btn_submit3").addEventListener ("click", ()=>{
+  console.log ("Hi")
+  console.log ("This is class3")
+})
 
-const func3 = (myVar) => {
-  console.log (myVar)
-}
 
-func1 ("Hi")
-func2 ("How are you")
-func3 ("My name is Omar")
-
-function handleSubmit ()  {
+function handleClick_submit () {
   console.log ("Hi")
 }
 
-document.getElementById ("btn_submit2").addEventListener ("click", handleSubmit)
+// Named Function
+function greetingClass () {
+    console.log ("Hi")
+    console.log ("This is class1")
+}
 
-document.getElementById ("btn_submit2").addEventListener ("click", function() {
-  console.log ("How are you")
-})
+// Anonymous function, function expression
+let greetingClass1 = function () {
+  console.log ("Hi")
+  console.log ("This is class2")
+}
 
-document.getElementById("btn_submit2").addEventListener ("click", ()=>{
-  console.log ("My name is Farnaz")
-})
+// Arrow function
 
-document.getElementById ("btn_submit3").addEventListener ("click", function(event) {
-  console.log (event)
-})
+let greetingClass2 = () => {
+  console.log ("Hi")
+  console.log ("This is class3")
+}
+
+greetingClass();
+greetingClass1();
+greetingClass2();
