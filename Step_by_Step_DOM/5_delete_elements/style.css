@@ -1,4 +1,8 @@
 
-.img_profile {
-  max-width: 700px;
+.profileImage {
+  border:10px solid red;
+  padding: 10px;
+  margin:20px;
+  max-width: 400px;
 }
+

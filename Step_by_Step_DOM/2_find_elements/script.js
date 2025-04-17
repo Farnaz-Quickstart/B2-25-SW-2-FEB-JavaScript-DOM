@@ -32,12 +32,20 @@ function handleChangeParagraphs2 () {
 }
 
 function handleQuerySelector() {
-  console.log (document.querySelector ("p"))
-  console.log (document.querySelector (".green"))
+  console.log (document.querySelector("p"))
+  console.log (document.querySelector(".green"))
+  console.log (document.querySelector("#paragraph2"))
 }
 
 function handleQuerySelectorAll() {
-  console.log (document.querySelectorAll ("p"))
+  console.log (document.querySelectorAll("p"))
+  console.log (document.querySelectorAll(".green"))
+  console.log (document.querySelectorAll("#paragraph2"))
+
+  const arrPara = document.querySelectorAll(".green")
+  for (index=0; index< arrPara.length; index++) {
+    arrPara[index].style.backgroundColor = "yellow"
+  }
 }
 
 

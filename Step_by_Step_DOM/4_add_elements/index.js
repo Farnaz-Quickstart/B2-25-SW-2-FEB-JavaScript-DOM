@@ -5,23 +5,19 @@
 
 
 function handleClick_addElement  () {
-  debugger;
   // Step 1: Create element
-  const para = document.createElement ("p")
-  para.textContent = "THIS IS OUR NEW PARAGRAPH"
-  para.style.color = "green"
-  document.getElementById ("section_aboutme").append (para)
-  // Step 2: Add element to the page
-  
+  const newElement = document.createElement ("p")
+  newElement.textContent = "This is our class"
 
-  // Step 1" Create element
-  const newImg = document.createElement ("img")
-  newImg.className = "img_profile"
-  newImg.src  = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ_q9o7qFlU-S9a71WAjxDSD8kCHtgi3WpBw&s"
-  document.body.append (newImg)
+  // Step 2: Add element to the page
+  document.getElementById("sectionProfile").append(newElement)
 }
 
-
-
-
-
+function handleClick_addImage (){
+  // Step 1: Create element
+  const newElement = document.createElement ("img")
+  newElement.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggTu7DsNwN06djRJalUksB-4Ev7Od5gqiLK3tGUianJl7nbaRoUcOpxpOSlfVMmt4l2bBQejcsUfEqP_AJp0j_fZDzXftR7fz_wZ2-SBFA1NaaFVBSVQAyMZR6NJO14iRApHY7mW5NYbg/w1200-h630-p-k-no-nu/Library.png"
+  
+  // Step 2: Add element to the page (appending)
+  document.getElementById("sectionProfile").append(newElement)
+}
